@@ -6,6 +6,12 @@ Discourtesy is a minimal framework to handle Discord interactions.
 
 Discourtesy requires [Python 3.9][python-3.9] or higher.
 
+The package is available on PyPi, so install it with `pip` or another dependency manager.
+
+```bash
+pip install discourtesy
+```
+
 ## Introduction
 
 ```py
