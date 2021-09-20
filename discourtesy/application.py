@@ -8,7 +8,7 @@ from .component import Component
 from .dispatch import Dispatch
 from .routes import IndexRoute, InteractionRoute
 
-version = "0.1.0"
+version = "0.1.1"
 
 
 class Application(Starlette):
