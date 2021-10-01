@@ -17,7 +17,7 @@ In no way, it intends to
 
 ## Bug Report / Fix
 
-Upon discovering a bug, please create an issue. This way, I can confirm the problem and swiftly implement a fix. Alternatively, feel free to submit a pull request with a short description of the bug and your proposed solution.
+Upon discovering a bug, please create an issue. This way, a core maintainer can confirm the problem and swiftly implement a fix. Alternatively, feel free to submit a pull request with a short description of the bug and your proposed solution.
 
 Please try to include
 
@@ -27,7 +27,7 @@ Please try to include
 
 ## Code Style
 
-The Discourtesy project adheres to the [PEP 8][pep-8] code style guidelines. [`black`][black] and [`flake8`][flake8] are being used to enforce this. This boils down to the usage of double quotes and a maximum line length of 79 characters.
+The Discourtesy project adheres to the [PEP 8][pep-8] code style guidelines, utilising [`black`][black] and [`flake8`][flake8] to enforce this. In particular, the usage of double quotes and a maximum line length of 79 characters is required.
 
 Furthermore, the usage of full sentences and British English is preferred where applicable.
 

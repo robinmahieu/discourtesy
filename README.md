@@ -43,4 +43,12 @@ To start the web server, use an ASGI server implementation like `uvicorn`.
 uvicorn filename:application
 ```
 
+## Contributing
+
+Before contributing to Discourtesy, make sure to read through the [contribution guidelines][contribution-guidelines].
+
+This project is licensed under the terms of the [MIT][mit-license] license.
+
+[contribution-guidelines]: <https://github.com/robinmahieu/discourtesy/blob/stardust/CONTRIBUTING.md>
+[mit-license]: <https://github.com/robinmahieu/discourtesy/blob/stardust/LICENSE>
 [python-3.9]: <https://www.python.org/downloads/>
