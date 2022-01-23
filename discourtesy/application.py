@@ -9,7 +9,7 @@ from discourtesy.dispatch import Dispatch
 from discourtesy.http import HTTPClient
 from discourtesy.routes import IndexRoute, InteractionRoute
 
-version = "0.1.1"
+version = "0.2.0"
 
 
 class Application(Starlette):
