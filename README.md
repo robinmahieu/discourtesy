@@ -4,7 +4,7 @@ Discourtesy is a minimal framework to handle Discord interactions.
 
 ## Installation
 
-Discourtesy requires [Python 3.9][python-3.9] or higher.
+Discourtesy requires [Python 3.10][python-3.10] or higher.
 
 The package is available on PyPi, so install it with `pip` or another dependency manager.
 
@@ -48,4 +48,4 @@ This project is licensed under the terms of the [MIT][mit-license] license.
 
 [contribution-guidelines]: <https://github.com/robinmahieu/discourtesy/blob/stardust/CONTRIBUTING.md>
 [mit-license]: <https://github.com/robinmahieu/discourtesy/blob/stardust/LICENSE>
-[python-3.9]: <https://www.python.org/downloads/>
+[python-3.10]: <https://www.python.org/downloads/>
