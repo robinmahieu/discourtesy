@@ -19,10 +19,7 @@ A basic application with a simple beep boop command looks like this.
 ```py
 import discourtesy
 
-application = discourtesy.Application()
-
-public_key = ""
-application.set_public_key(public_key)
+application = discourtesy.Application(application_id=0, public_key="", token="")
 
 
 @discourtesy.command("beep")
