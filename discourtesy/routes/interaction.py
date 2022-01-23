@@ -3,6 +3,8 @@ from nacl.exceptions import BadSignatureError
 from starlette.responses import JSONResponse, PlainTextResponse
 from starlette.routing import Route
 
+from discourtesy.followup import FollowupTask
+
 
 class InteractionRoute(Route):
     def __init__(self):
@@ -38,9 +40,17 @@ class InteractionRoute(Route):
         if interaction["type"] == 2:
             logger.debug("Received T2 APPLICATION_COMMAND.")
 
-            message = await request.app.dispatch.execute_command(
+            message, task = await request.app.dispatch.execute_command(
                 request.app, interaction
             )
+
+            if task:
+                response = {"type": 5}
+                followup_task = FollowupTask(task, request.app, interaction)
+
+                return JSONResponse(
+                    response, background=followup_task, status_code=200
+                )
 
             response = {"type": 4, "data": message}
 
@@ -57,7 +67,7 @@ class InteractionRoute(Route):
 
             response = {"type": 7, "data": message}
 
-            if message is None:
+            if not message:
                 response = {"type": 6}
 
             return JSONResponse(response, status_code=200)
