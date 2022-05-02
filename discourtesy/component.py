@@ -7,10 +7,11 @@ from discourtesy.utils import simple_message
 
 
 class Component:
-    def __init__(self, name, coroutine, timeout):
+    def __init__(self, name, coroutine, callback_type, timeout):
         self.name = name
         self.coroutine = coroutine
 
+        self.callback_type = callback_type
         self.timeout = timeout
 
     async def __call__(self, application, interaction):
@@ -33,15 +34,15 @@ class Component:
             response = simple_message(response)
 
         if response:
-            response = {"type": 7, "data": response}
+            response = {"type": self.callback_type, "data": response}
         else:
             response = {"type": 6}
 
         return JSONResponse(response, status_code=200)
 
 
-def component(name, timeout=0):
+def component(name, callback_type=7, timeout=0):
     def decorator(coroutine):
-        return Component(name, coroutine, timeout)
+        return Component(name, coroutine, callback_type, timeout)
 
     return decorator
