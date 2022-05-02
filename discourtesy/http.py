@@ -24,3 +24,10 @@ class HTTPClient(AsyncClient):
         endpoint = f"/webhooks/{self.application_id}/{token}"
 
         return await self.post(endpoint, json=json)
+
+    async def edit_followup_message(self, token, message_id, json):
+        endpoint = (
+            f"/webhooks/{self.application_id}/{token}/messages/{message_id}"
+        )
+
+        return await self.patch(endpoint, json=json)
