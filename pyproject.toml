@@ -6,8 +6,12 @@ license = "MIT"
 authors = ["Robin Mahieu <robin.mahieu@protonmail.com>"]
 
 readme = "README.md"
+homepage = "https://github.com/robinmahieu/discourtesy"
 repository = "https://github.com/robinmahieu/discourtesy"
 keywords = ["discord", "discourtesy"]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/robinmahieu/discourtesy/issues"
 
 [tool.poetry.dependencies]
 python = "^3.10"
