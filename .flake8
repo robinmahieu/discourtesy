@@ -1,2 +1,9 @@
 [flake8]
 exclude = __init__.py
+
+# flake8-import-order
+application-import-names = discourtesy
+import-order-style = pycharm
+
+# ignore all flake8-annotations complaints
+extend-ignore = ANN
