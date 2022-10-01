@@ -6,20 +6,33 @@ license = "MIT"
 authors = ["Robin Mahieu <robin.mahieu@protonmail.com>"]
 
 readme = "README.md"
+homepage = "https://github.com/robinmahieu/discourtesy"
 repository = "https://github.com/robinmahieu/discourtesy"
 keywords = ["discord", "discourtesy"]
 
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/robinmahieu/discourtesy/issues"
+
 [tool.poetry.dependencies]
 python = "^3.10"
-httpx = "^0.22.0"
+httpx = "^0.23.0"
 loguru = "^0.6.0"
 PyNaCl = "^1.5.0"
-starlette = "^0.19.1"
-uvicorn = "^0.17.6"
+starlette = "^0.21.0"
+uvicorn = "^0.18.3"
 
 [tool.poetry.dev-dependencies]
-black = "^22.3.0"
-flake8 = "^4.0.1"
+black = "^22.8.0"
+flake8 = "^5.0.4"
+
+flake8-annotations = "^2.9.1"
+flake8-bugbear = "^22.9.23"
+flake8-import-order = "^0.18.1"
+flake8-tidy-imports = "^4.8.0"
+pep8-naming = "^0.13.2"
+
+[tool.black]
+line-length = 79
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
